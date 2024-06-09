@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "stock-investing-telegram-bot"
+version = "0.1.0"
+description = ""
+authors = ["imcvampire <anhnq0@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-telegram-bot = "^21.3"
+yfinance = "^0.2.40"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.0"
+pytest = "^8.2.2"
+
+[tool.poetry.scripts]
+main = "__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = [
+  "--import-mode=importlib",
+]
+
+[virtualenvs]
+prefer-active-python = true
